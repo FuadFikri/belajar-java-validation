@@ -15,3 +15,9 @@ source : programmer zaman now
 
 ## Nested Validation
 - perlu menambahkan annotation @Valid pada field address di class Person
+
+
+## Hibernate Validator Constraint
+- selain annotation yg ada di Bean Validation, Hibernate Validator juga menyediakan constraint tambahan
+- kita bisa melihatnya di package org.hibernate.validator.constraints
+
