@@ -2,24 +2,13 @@
 
 source : programmer zaman now
 
-### create project
-add dependency
 
-    <dependency>
-        <groupId>jakarta.validation</groupId>
-        <artifactId>jakarta.validation-api</artifactId>
-        <version>3.0.2</version>
-    </dependency>
+##Validator
+- class utama dalam Bean Validation
+- Validator digunakan sebagai object untuk mengeksekusi validation.
+- Validator adalah object yang berat. Sebaiknya hanya dibuat sekali saja
 
-  	<dependency>
-  		<groupId>org.hibernate.validator</groupId>
-  		<artifactId>hibernate-validator</artifactId>
-  		<version>8.0.0.Final</version>
-  	</dependency>
-
-  	<dependency>
-  		<groupId>org.glassfish</groupId>
-  		<artifactId>jakarta.el</artifactId>
-  		<version>4.0.2</version>
-  		<scope>test</scope>
-  	</dependency>`
+##ValidatorFactory
+- Validator adalah Interface, untuk membuatnya kita membutuhkan ValidatorFactory
+- ValidatorFactory cukup dibuat sekali di dalam aplikasi karena ini adalah obect yang berat.
+- UNtuk membuatnya bisa menggunakan calss Validation dan method buildDefaultValidatorFactory()
