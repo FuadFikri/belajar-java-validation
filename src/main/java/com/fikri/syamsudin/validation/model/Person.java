@@ -1,5 +1,6 @@
 package com.fikri.syamsudin.validation.model;
 
+import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 
@@ -15,6 +16,10 @@ public class Person {
     private String lastName;
 
 
+    @Valid
+    private Address address;
+
+
     public Person(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -22,6 +27,14 @@ public class Person {
     }
 
     public Person() {
+    }
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
     }
 
     public String getFirstName() {
