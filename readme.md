@@ -21,3 +21,11 @@ source : programmer zaman now
 - selain annotation yg ada di Bean Validation, Hibernate Validator juga menyediakan constraint tambahan
 - kita bisa melihatnya di package org.hibernate.validator.constraints
 
+
+## Grouping constraints
+- contoh kasus: payment menggunakan credit card, transfer bank, dll menggunakan  class DTO yang sama
+- oleh karena itu perlu group constraint karena kebutuhannya berbeda
+- misalnya payment dengan CC, maka creditCardNumber menjadi mandatory
+- namun jika payment menggunakan VA bank, maka creditCardNumber tidak menjadi mandatory
+- setiap constraint bisa memiliki lebih dari 1 group
+- 

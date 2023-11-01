@@ -41,4 +41,19 @@ public class AbstractTest {
 
         return violations;
     }
+
+    protected Set<ConstraintViolation<Object>> validateWithGroup(Object o, Class<?>... groups){
+        Set<ConstraintViolation<Object>> violations = validator.validate(o,groups);
+        for (ConstraintViolation<Object> violation : violations) {
+            System.out.println("message : " + violation.getMessage());
+            System.out.println("leafBean : " + violation.getLeafBean()); // fieldnya ada dimana
+            System.out.println("annotation : " + violation.getConstraintDescriptor().getAnnotation());
+            System.out.println("invalid value : " + violation.getInvalidValue());
+            System.out.println("path : " + violation.getPropertyPath());
+
+            System.out.println("============");
+        }
+
+        return violations;
+    }
 }
