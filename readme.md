@@ -28,4 +28,7 @@ source : programmer zaman now
 - misalnya payment dengan CC, maka creditCardNumber menjadi mandatory
 - namun jika payment menggunakan VA bank, maka creditCardNumber tidak menjadi mandatory
 - setiap constraint bisa memiliki lebih dari 1 group
+
+## Group Sequence
+- urutan group mana dulu yang di validasi
 - 

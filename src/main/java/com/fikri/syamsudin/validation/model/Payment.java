@@ -3,14 +3,18 @@ package com.fikri.syamsudin.validation.model;
 import com.fikri.syamsudin.validation.model.group.CreditCardPaymentGroup;
 import com.fikri.syamsudin.validation.model.group.VirtualAccountPaymentGroup;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.groups.Default;
 import org.hibernate.validator.constraints.LuhnCheck;
 import org.hibernate.validator.constraints.Range;
 
 public class Payment {
 
 
-    @NotBlank(groups = {CreditCardPaymentGroup.class, VirtualAccountPaymentGroup.class})
+    @NotBlank(groups = {Default.class})
     private String orderId;
+
+    @NotBlank(groups = { VirtualAccountPaymentGroup.class})
+    private String virtualAccount;
 
     @Range(min = 1000 , max = 100_000_000, message = "between 1000 and 100000000")
     private Long amount;
@@ -45,5 +49,13 @@ public class Payment {
 
     public void setCreditCard(String creditCard) {
         this.creditCard = creditCard;
+    }
+
+    public String getVirtualAccount() {
+        return virtualAccount;
+    }
+
+    public void setVirtualAccount(String virtualAccount) {
+        this.virtualAccount = virtualAccount;
     }
 }
