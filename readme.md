@@ -31,4 +31,10 @@ source : programmer zaman now
 
 ## Group Sequence
 - urutan group mana dulu yang di validasi
+
+
+## Group Conversion
+- Kadang ada kasus dimana terdapat sebuah class yang sudah memiliki field group, namun ternyata kita membutuhkan class tersebut di embed di class lain, sedangkan class lain menggunakan group berbeda
+- class Payment memiliki Customer sebagai field
+- perlu menambahan @ConvertGroup di class Payment agar field validation di class Customer akan divalidasi
 - 
