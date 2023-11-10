@@ -1,5 +1,6 @@
 package com.fikri.syamsudin.validation.model;
 
+import com.fikri.syamsudin.validation.model.payload.EmailErrorPayload;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 
@@ -12,7 +13,7 @@ public class Customer {
     private String address;
 
     @NotBlank(message = "email cannot be blank")
-    @Email(message = "email is not valid")
+    @Email(message = "email is not valid", payload = {EmailErrorPayload.class})
     private String email;
 
     public Customer() {

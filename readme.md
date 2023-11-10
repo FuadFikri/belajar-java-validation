@@ -37,4 +37,8 @@ source : programmer zaman now
 - Kadang ada kasus dimana terdapat sebuah class yang sudah memiliki field group, namun ternyata kita membutuhkan class tersebut di embed di class lain, sedangkan class lain menggunakan group berbeda
 - class Payment memiliki Customer sebagai field
 - perlu menambahan @ConvertGroup di class Payment agar field validation di class Customer akan divalidasi
-- 
+
+
+## Payload
+- Secara default aturan Annotation Constraint di Bean Validation selain memiliki method message() dan groups(), ada juga payload()
+- Method payload() itu sendiri sebenarnya tidak digunakan sama sekali oleh Bean Validation, namun method ini bisa digunakan oleh kita untuk menambah informasi ketika menggunakan constraint
