@@ -47,3 +47,8 @@ source : programmer zaman now
 ## Method validation
 - Bean Validation sendiri bisa digunakan untuk melakukan validasi di Method, baik itu Method Parameter atau Return Value
 - Fitur ini memudahkan kita karena cukup menambahkan Annotation Constraint di Method Parameter
+
+
+## Message interpolation and resource bundle
+- membuat ValidationMessages.properties untuk menyimpan message
+- {variable} untuk mengambil data

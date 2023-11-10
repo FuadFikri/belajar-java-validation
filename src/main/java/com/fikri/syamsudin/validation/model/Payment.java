@@ -5,6 +5,7 @@ import com.fikri.syamsudin.validation.model.group.VirtualAccountPaymentGroup;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import jakarta.validation.groups.ConvertGroup;
 import jakarta.validation.groups.Default;
 import org.hibernate.validator.constraints.LuhnCheck;
@@ -13,7 +14,8 @@ import org.hibernate.validator.constraints.Range;
 public class Payment {
 
 
-    @NotBlank(groups = {Default.class})
+    @NotBlank(groups = {Default.class}, message = "{payment.orderId.blank}")
+    @Size(min = 1, max = 20,groups = {Default.class}, message = "{payment.orderId.size}")
     private String orderId;
 
     @NotBlank(groups = { VirtualAccountPaymentGroup.class})
