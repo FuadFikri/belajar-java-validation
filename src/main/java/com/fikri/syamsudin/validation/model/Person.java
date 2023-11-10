@@ -2,10 +2,10 @@ package com.fikri.syamsudin.validation.model;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
 public class Person {
-
 
 
     @Size(max = 10, message = "max 10 characters first name length ")
@@ -27,6 +27,18 @@ public class Person {
     }
 
     public Person() {
+    }
+
+
+@Valid
+    public Person(@NotBlank(message = "first name cannot be blank") String firstName,
+
+                  @NotBlank String lastName,
+
+                  @NotNull Address address) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.address = address;
     }
 
     public Address getAddress() {
@@ -61,13 +73,13 @@ public class Person {
                 '}';
     }
 
-    public void sayHello(@NotBlank(message = "name must not blank") String name){
-        System.out.println("Hi "+ name + "  my name is "+ this.firstName);
+    public void sayHello(@NotBlank(message = "name must not blank") String name) {
+        System.out.println("Hi " + name + "  my name is " + this.firstName);
     }
 
 
     @NotBlank
-    public String fullName(){
+    public String fullName() {
         return firstName + " " + lastName;
     }
 
