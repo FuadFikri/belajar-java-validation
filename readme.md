@@ -42,3 +42,8 @@ source : programmer zaman now
 ## Payload
 - Secara default aturan Annotation Constraint di Bean Validation selain memiliki method message() dan groups(), ada juga payload()
 - Method payload() itu sendiri sebenarnya tidak digunakan sama sekali oleh Bean Validation, namun method ini bisa digunakan oleh kita untuk menambah informasi ketika menggunakan constraint
+
+
+## Method validation
+- Bean Validation sendiri bisa digunakan untuk melakukan validasi di Method, baik itu Method Parameter atau Return Value
+- Fitur ini memudahkan kita karena cukup menambahkan Annotation Constraint di Method Parameter
