@@ -52,3 +52,6 @@ source : programmer zaman now
 ## Message interpolation and resource bundle
 - membuat ValidationMessages.properties untuk menyimpan message
 - {variable} untuk mengambil data
+
+## Constraint Composition
+- mengumpulkan banyak constraint dalam 1 constraint

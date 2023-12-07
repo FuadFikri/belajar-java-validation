@@ -1,14 +1,15 @@
 package com.fikri.syamsudin.validation.model;
 
+import com.fikri.syamsudin.validation.constraints.CheckBookId;
 import com.fikri.syamsudin.validation.constraints.CheckCase;
 import com.fikri.syamsudin.validation.model.enums.CaseMode;
+import com.fikri.syamsudin.validation.model.group.BookGroup;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.groups.Default;
 
 public class Book {
 
-    @NotBlank
-    @CheckCase(groups = Default.class, message = "{book.id.upper}", mode = CaseMode.UPPER_CASE)
+    @CheckBookId(groups = {BookGroup.class})
     private String id;
 
     @NotBlank
