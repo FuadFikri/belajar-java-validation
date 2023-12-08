@@ -55,3 +55,8 @@ source : programmer zaman now
 
 ## Constraint Composition
 - mengumpulkan banyak constraint dalam 1 constraint
+
+## Validasi di level class
+- mengecek beberapa field sekaligus
+- dalam contoh ini, membandingkan field password dan reTypePassword dalam class register
+- menggunakan @Target({ElementType.TYPE}) pada annotation untuk target class
